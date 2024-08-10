@@ -158,7 +158,7 @@ class CalendarHelper {
       if (d < minDay || d > maxDay) {
         if (!this.options.hideIgnoredWeeks) {
           currentRow[weekDay] = Markup.button.callback(
-            CalendarHelper.strikethroughText(d.toString()),
+            ' ',
             'calendar-telegram-ignore-' + CalendarHelper.toYyyymmdd(date)
           );
         }
@@ -166,7 +166,7 @@ class CalendarHelper {
         daysOfWeekIgnored++;
       } else if (this.options.ignoreWeekDays.includes(weekDay)) {
         currentRow[weekDay] = Markup.button.callback(
-          CalendarHelper.strikethroughText(d.toString()),
+          ' ',
           'calendar-telegram-ignore-' + CalendarHelper.toYyyymmdd(date)
         );
 
